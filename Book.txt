@@ -1,0 +1,7 @@
+create database Book;
+use Book;
+
+create table Category( CategoryId char(20) primary key, CategoryName char(20), Description char(50), Image varbinary(max), status char(20), Position char(20), CreatedAt date);
+
+create table book(BookId char(20) primary key, CategoryId(20) char(20) foreign key references Catergory(CategoryId), Title char(50), ISBN int, price number, Description char(50), Position char(20), Status char(20), Image varbinary(max));
+
